@@ -5,7 +5,7 @@ import api from '../../../services/api'
 import { addProductToCartFailure, addProductToCartRequest, addProductToCartSuccess } from './actions'
 // TYPES //
 import { IState } from '../..'
-import { IStockResponse } from './types'
+import { ActionTypes, IStockResponse } from './types'
 
 type CheckProductStockRequest = ReturnType<typeof addProductToCartRequest>
 
@@ -34,5 +34,5 @@ function* checkProductsStock({ payload }: CheckProductStockRequest) {
 }
 
 export default all([
-    takeLatest('ADD_PRODUCT_TO_CART_REQUEST', checkProductsStock)
+    takeLatest(ActionTypes.addProductToCartRequest, checkProductsStock)
 ])

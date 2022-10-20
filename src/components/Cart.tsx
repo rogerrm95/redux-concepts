@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import { IState } from "../store"
-import cart from "../store/modules/cart/reducer"
 import { ICartItem } from "../store/modules/cart/types"
 
 export function Cart() {

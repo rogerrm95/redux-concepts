@@ -1,3 +1,4 @@
+// ROTA PRODUCTS //
 export interface IProduct {
     id: number,
     title: string,
@@ -11,4 +12,11 @@ export interface ICartItem {
 
 export interface ICartState {
     items: ICartItem[],
+    failedStockCheck: number[]
+}
+
+// ROTA STOCK //
+export interface IStockResponse {
+    id: number,
+    quantity: number
 }
